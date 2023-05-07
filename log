@@ -297,3 +297,19 @@ sudoku.c:48:11: note: previous declaration of ‘k’ with type ‘int’
       |           ^
 Compilation failed
 613f302
+Sun 07 May 2023 04:50:11 AM UTC: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:65:3: error: expected expression before ‘}’ token
+   65 |   }
+      |   ^
+sudoku.c:74:7: error: redeclaration of ‘k’ with no linkage
+   74 |   int k=4,p;
+      |       ^
+sudoku.c:48:11: note: previous declaration of ‘k’ with type ‘int’
+   48 |   int i,j,k;
+      |           ^
+Compilation failed
+28d5a98

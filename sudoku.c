@@ -65,7 +65,7 @@ int is_valid(Node* n){
   }
   
   //revisa la validez por submatrices de 3x3
-  for(k=0;k<9;k++9){
+  for(k=0;k<9;k++){
     
   }
   
