@@ -50,7 +50,7 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
   List* list=createList();
-  int i,j,k,empty=0;
+  int i,j,k,sn=0;
   //recorre 9 tableros
   for(k=0;k<9;k++){
     Node* adjn = createNode();
@@ -66,7 +66,7 @@ List* get_adj_nodes(Node* n){
         }
     pushBack(list, adjn);
   }
-  if(empty==0) return NULL;
+  if(sn==0) return NULL;
   else return list;
 }
 

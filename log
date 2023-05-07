@@ -238,3 +238,14 @@ Sun 07 May 2023 04:16:22 AM UTC:
  1 file changed, 6 insertions(+), 4 deletions(-)
  tests:  0|0
 3b671f1
+Sun 07 May 2023 04:16:42 AM UTC: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:65:11: error: ‘empty’ undeclared (first use in this function)
+   65 |           empty++;
+      |           ^~~~~
+sudoku.c:65:11: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+fb4876e
