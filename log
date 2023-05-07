@@ -254,3 +254,14 @@ Sun 07 May 2023 04:16:50 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 19b413c
+Sun 07 May 2023 04:21:14 AM UTC: 
+ sudoku.c | 17 +++++++++++------
+ 1 file changed, 11 insertions(+), 6 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:59:10: error: ‘k’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+   59 |         k++;
+      |         ~^~
+cc1: all warnings being treated as errors
+Compilation failed
+8d68d4d
