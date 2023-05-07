@@ -125,6 +125,7 @@ Node* DFS(Node* initial, int* cont){
   Stack* S=createStack();
   push(S,initial);
   while (get_size(S) != 0){
+    pop(S);
     Node* n = (Node*)S;
     if(is_final(n)==1) return n;
     
@@ -134,7 +135,6 @@ Node* DFS(Node* initial, int* cont){
       push(S,aux);
       aux=next(adjn);
     }
-    pop(S);
   }
   return NULL;
 }
