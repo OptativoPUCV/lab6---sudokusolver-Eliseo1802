@@ -60,7 +60,7 @@ List* get_adj_nodes(Node* n){
     for(i=0;i<9;i++)
       for(j=0;j<9;j++)
         //si la posición está vacía (0) entonces lo rellena con el número que corresponde
-        if(adjn->sudo[i][j]==0){
+        if(n->sudo[i][j]==0){
           adjn->sudo[i][j] = k+1;
           pushBack(list, adjn);
         }
