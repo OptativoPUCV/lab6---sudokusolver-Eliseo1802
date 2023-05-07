@@ -53,7 +53,7 @@ int is_valid(Node* n){
   //validez por fila
   for(i=0;i<9;i++){
     for(j=0;j<9;j++)
-      //numrep[n->sudo[i][j]]++;
+      numrep[n->sudo[i][j]]++;
     for(k=1;k<10;k++)
       if(numrep[k]>1) return 0;
     for(h=0;h<10;h++)
