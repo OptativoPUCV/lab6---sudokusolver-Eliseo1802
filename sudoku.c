@@ -61,7 +61,7 @@ List* get_adj_nodes(Node* n){
         Node *adjn = createNode();
         adjn->sudo[i][j] = num;
         num++;
-        pushBack(list, adjn);
+        pushFront(list, adjn);
       }
   printf("\n%d",n->sudo[0][0]);
   printf("\n%d",n->sudo[0][1]);
