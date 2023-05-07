@@ -349,3 +349,13 @@ Sun 07 May 2023 05:19:21 AM UTC:
  tests:  7|1
 total_score: 55/70
 32b25c4
+Sun 07 May 2023 05:32:12 AM UTC: 
+ sudoku.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘DFS’:
+sudoku.c:128:16: error: void value not ignored as it ought to be
+  128 |      Node* n = pop(S);
+      |                ^~~
+Compilation failed
+65f3866
