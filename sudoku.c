@@ -62,7 +62,7 @@ List* get_adj_nodes(Node* n){
         //con el número que corresponde por tablero
         if(n->sudo[i][j]==0){
           adjn->sudo[i][j] = k+1;
-          empty++;
+          sn++;
         }
     pushBack(list, adjn);
   }
