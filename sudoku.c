@@ -45,7 +45,7 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
   int numrep[10];
-  int i,j,k,h;
+  int i,j,k,h,p;
 
   //inicializa numrep en 0s
   for(h=0;h<10;h++) numrep[h]=0;
@@ -69,14 +69,19 @@ int is_valid(Node* n){
     for(h=0;h<10;h++)
       numrep[h]=0;
   }
-  
-  /*int k=4,p; 
-  for(p=0;p<9;p++){
-    int i=3*(k/3) + (p/3) ;
-    int j=3*(k%3) + (p%3) ;
-    printf("%d ",n->sudo[i][j]);
-    if(p%3 == 2) printf("\n");
-  }*/
+
+  //validez por submatriz 3x3
+  for(k=0;k<9;k++){
+    for(p=0;p<9;p++){
+      i=3*(k/3)+(p/3);
+      j=3*(k%3)+(p%3);
+      numrep[n->sudo[i][j]]++;
+    }
+    for(i=1;i<10;i++)
+      if(numrep[i]>1) return 0;
+    for(h=0;h<10;h++)
+      numrep[h]=0;
+  }
   
   return 1;
 }
