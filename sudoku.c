@@ -56,15 +56,16 @@ List* get_adj_nodes(Node* n){
   for(k=0;k<9;k++){
     //recorre cada tablero por cada posición que tiene (i,j)
     for(i=0;i<9;i++)
-      for(j=0;j<9;j++)
+      for(j=0;j<9;j++){
         //si la posición está vacía (=0) entonces lo rellena 
         //con el número que corresponde por tablero
+        Node* adjn = createNode();
+        adjn = copy(n);
         if(n->sudo[i][j]==0){
-          Node* adjn = createNode();
-          adjn = copy(n);
           adjn->sudo[i][j] = k+1;
           pushBack(list, adjn);
         }
+      }
   }
   return list;
 }
