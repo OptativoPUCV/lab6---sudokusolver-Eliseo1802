@@ -72,3 +72,14 @@ sudoku.c:57:23: error: ‘adjn’ undeclared (first use in this function)
 sudoku.c:57:23: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 4a4c804
+Sun 07 May 2023 03:37:51 AM UTC: 
+ sudoku.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:63:23: error: ‘adjn’ undeclared (first use in this function)
+   63 |       printf("\n%d\n",adjn->sudo[i][j]);
+      |                       ^~~~
+sudoku.c:63:23: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+6314f6b

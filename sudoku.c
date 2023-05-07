@@ -54,7 +54,6 @@ List* get_adj_nodes(Node* n){
   int i,j,num = 1;
   for(i=0;i<9;i++)
     for(j=0;j<9;j++){
-      printf("\n%d\n",adjn->sudo[i][j]);
       if(n->sudo[i][j]==0){
         Node *adjn = createNode();
         adjn->sudo[i][j] = num;
