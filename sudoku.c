@@ -48,10 +48,9 @@ int is_valid(Node* n){
   return 1;
 }
 
-
 List* get_adj_nodes(Node* n){
   List* list=createList();
-  int i,j,k;
+  int i,j,k,empty=0;
   //recorre 9 tableros
   for(k=0;k<9;k++){
     Node* adjn = createNode();
@@ -61,11 +60,14 @@ List* get_adj_nodes(Node* n){
       for(j=0;j<9;j++)
         //si la posición está vacía (=0) entonces lo rellena 
         //con el número que corresponde por tablero
-        if(n->sudo[i][j]==0)
+        if(n->sudo[i][j]==0){
           adjn->sudo[i][j] = k+1;
+          empty++;
+        }
     pushBack(list, adjn);
   }
-  return list;
+  if(empty==0) return NULL;
+  else return list;
 }
 
 
