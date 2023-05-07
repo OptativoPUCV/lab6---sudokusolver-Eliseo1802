@@ -44,7 +44,7 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-  int* numrep[10];
+  /*int* numrep[10];
   int i,j,k;
 
   //inicia en 0 el arreglo de repeticiones de un número
@@ -60,7 +60,7 @@ int is_valid(Node* n){
   //revida la validez por columnas
   for(k=0;k<9;k++){
     for(i=0;i<9;i++)
-      for(j=0;j<9;j++)
+      for(j=0;j<9;j++){}
     
   }
   
@@ -69,15 +69,15 @@ int is_valid(Node* n){
     
   }
   
+  */
   
-  
-  int k=4,p; 
+  /*int k=4,p; 
   for(p=0;p<9;p++){
     int i=3*(k/3) + (p/3) ;
     int j=3*(k%3) + (p%3) ;
     printf("%d ",n->sudo[i][j]);
     if(p%3 == 2) printf("\n");
-  }
+  }*/
   
   return 1;
 }
