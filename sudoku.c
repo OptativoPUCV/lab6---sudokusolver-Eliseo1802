@@ -52,9 +52,9 @@ int is_valid(Node* n){
 List* get_adj_nodes(Node* n){
   List* list=createList();
   int i,j,k;
-  Node* adjn = createNode();
   //recorre 9 tableros
   for(k=0;k<9;k++){
+    Node* adjn = createNode();
     adjn = copy(n);
     //recorre cada tablero por cada posición que tiene (i,j)
     for(i=0;i<9;i++)
