@@ -50,7 +50,7 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
   List* list=createList();
-  int i,j,k;
+  int i,j,k=0;
 
   //revisa si no hay valores vacíos en el tablero
   for(i=0;i<9;i++)
