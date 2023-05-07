@@ -277,3 +277,23 @@ Sun 07 May 2023 04:27:51 AM UTC:
  tests:  2|4
 total_score: 15/70
 926819e
+Sun 07 May 2023 04:49:52 AM UTC: 
+ sudoku.c | 36 ++++++++++++++++++++++++++++++++++++
+ 1 file changed, 36 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:65:3: error: expected expression before ‘}’ token
+   65 |   }
+      |   ^
+sudoku.c:68:18: error: expected ‘)’ before numeric constant
+   68 |   for(k=0;k<9;k++9){
+      |      ~           ^
+      |                  )
+sudoku.c:74:7: error: redeclaration of ‘k’ with no linkage
+   74 |   int k=4,p;
+      |       ^
+sudoku.c:48:11: note: previous declaration of ‘k’ with type ‘int’
+   48 |   int i,j,k;
+      |           ^
+Compilation failed
+613f302

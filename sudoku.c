@@ -44,7 +44,41 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
+  int* numrep[10];
+  int i,j,k;
 
+  //inicia en 0 el arreglo de repeticiones de un número
+  for(i=0;i<10;i++) numrep[i]=0;
+  
+  //revisa la validez por filas
+  for(k=0;k<9;k++){
+    for(i=0;i<9;i++)
+      for(j=0;j<9;j++)
+        numrep[n->sudo[i][j]]++;
+  }
+  
+  //revida la validez por columnas
+  for(k=0;k<9;k++){
+    for(i=0;i<9;i++)
+      for(j=0;j<9;j++)
+    
+  }
+  
+  //revisa la validez por submatrices de 3x3
+  for(k=0;k<9;k++9){
+    
+  }
+  
+  
+  
+  int k=4,p; 
+  for(p=0;p<9;p++){
+    int i=3*(k/3) + (p/3) ;
+    int j=3*(k%3) + (p%3) ;
+    printf("%d ",n->sudo[i][j]);
+    if(p%3 == 2) printf("\n");
+  }
+  
   return 1;
 }
 
@@ -58,6 +92,7 @@ List* get_adj_nodes(Node* n){
       //si la posición está vacía (=0) entonces lo rellena 
       //con el número que corresponde por tablero
       if(n->sudo[i][j]==0){
+        //crea 9 versiones del tablero (1,2,...,9)
         for(k=0;k<9;k++){
           Node* adjn = createNode();
           adjn = copy(n);
@@ -66,6 +101,7 @@ List* get_adj_nodes(Node* n){
         }
         return list;
       }
+  //si entra a este return es porque no había valor nulo
   return list;
 }
 
