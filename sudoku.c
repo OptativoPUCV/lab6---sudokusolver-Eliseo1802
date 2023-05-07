@@ -59,7 +59,7 @@ List* get_adj_nodes(Node* n){
     for(j=0;j<9;j++)
       if(n->sudo[i][j]==0){
         Node *adjn = createNode();
-        adjn->sudo[i][j] = num+1;
+        adjn->sudo[i][j] = num;
         num++;
         pushBack(list, adjn);
       }
