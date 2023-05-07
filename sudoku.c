@@ -44,32 +44,31 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-  /*int* numrep[10];
-  int i,j,k;
+  int numrep[10];
+  int i,j,k,h;
 
-  //inicia en 0 el arreglo de repeticiones de un número
-  for(i=0;i<10;i++) numrep[i]=0;
-  
-  //revisa la validez por filas
-  for(k=0;k<9;k++){
-    for(i=0;i<9;i++)
-      for(j=0;j<9;j++)
-        numrep[n->sudo[i][j]]++;
+  //inicializa numrep en 0s
+  for(h=0;h<10;h++) numrep[h]=0;
+
+  //validez por fila
+  for(i=0;i<9;i++){
+    for(j=0;j<9;j++)
+      numrep[n->sudo[i][j]]++;
+    for(k=1;k<10;k++)
+      if(numrep[k]>1) return 0;
+    for(h=0;h<10;h++)
+      numrep[h]=0;
   }
-  
-  //revida la validez por columnas
-  for(k=0;k<9;k++){
-    for(i=0;i<9;i++)
-      for(j=0;j<9;j++){}
-    
+
+  //validez por columna
+  for(i=0;i<9;i++){
+    for(j=0;j<9;j++)
+      numrep[n->sudo[j][i]]++;
+    for(k=1;k<10;k++)
+      if(numrep[k]>1) return 0;
+    for(h=0;h<10;h++)
+      numrep[h]=0;
   }
-  
-  //revisa la validez por submatrices de 3x3
-  for(k=0;k<9;k++){
-    
-  }
-  
-  */
   
   /*int k=4,p; 
   for(p=0;p<9;p++){
