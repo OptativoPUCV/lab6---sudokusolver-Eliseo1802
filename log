@@ -198,3 +198,14 @@ Sun 07 May 2023 04:05:59 AM UTC:
  tests:  1|5
 total_score: 5/70
 07026bd
+Sun 07 May 2023 04:11:26 AM UTC: 
+ sudoku.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:67:20: error: ‘adjn’ undeclared (first use in this function)
+   67 |     pushBack(list, adjn);
+      |                    ^~~~
+sudoku.c:67:20: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+3adb910
