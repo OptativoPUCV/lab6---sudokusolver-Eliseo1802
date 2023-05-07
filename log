@@ -20,3 +20,14 @@ Sun 07 May 2023 03:29:51 AM UTC:
  tests:  0|5
 total_score: 0/70
 6110a3d
+Sun 07 May 2023 03:32:02 AM UTC: 
+ sudoku.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:55:17: error: ‘sudo’ undeclared (first use in this function)
+   55 |   printf("\n%d",sudo[0][0]);
+      |                 ^~~~
+sudoku.c:55:17: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+11537d2
